@@ -1,4 +1,4 @@
-# ✨ My minimal catppuccine mocha riced config
+# ✨ My minimal catppuccin mocha riced config
 
 ## ⚡ Info
 
