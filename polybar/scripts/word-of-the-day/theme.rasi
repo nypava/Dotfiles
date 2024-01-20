@@ -1,0 +1,20 @@
+@theme "~/.config/rofi/colors.rasi"
+
+* {
+	  font: "Iosevka Nerd Font 13";
+    width: 820px;
+}
+
+window {
+    background-color: @bg-col;
+    padding: 25px;
+    border: 1px;
+    border-color: @border-col;
+    location: center;
+}
+
+
+textbox {
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
