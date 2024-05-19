@@ -30,7 +30,7 @@ def update():
     local_word = data.get("word")
     scrapped_word = scrapped_data.get("word") 
 
-    if local_word != scrapped_word:
+    if local_word != scrapped_word or True:
         with open(f"{DIR}data.json", "w") as file:
             file.write(dumps(scrapped_data, indent=4))
 
@@ -46,16 +46,17 @@ class Scraper:
         response = requests.get(self.MAIN_URL)
         soup = BeautifulSoup(response.text, "html.parser")
 
-        word_element = soup.find(class_="word-header-txt")
+        word_element = soup.find_all(class_="word-header-txt")[0]
         self.word = word_element.get_text(strip=True)
 
-        meaning_element = soup.find("p")
+        meaning_element = soup.find_all("p")[0]
         self.meaning = meaning_element.get_text(" ", strip=True)
 
         example_elements = soup.find_all("p")[1:]
         self.example = ""
+
         for example_element in example_elements:
-            if example_element.get_text(strip=True) == "See the entry >":
+            if ">" in example_element.get_text(strip=True): 
                 break
 
             self.example += "\n\n" + "Example - " + (example_element.get_text(" ", strip=True))[3:]

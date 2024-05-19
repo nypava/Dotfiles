@@ -9,7 +9,6 @@ return {
   {'hrsh7th/nvim-cmp',
     config = function()
       local cmp = require'cmp'
-
       cmp.setup({
         snippet = {
           expand = function(args)
@@ -36,5 +35,4 @@ return {
     end
   }
 }
-
 

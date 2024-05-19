@@ -25,8 +25,8 @@ element-text, element-icon , mode-switcher {
 window {
     height: 360px;
     border: 1px;
-    border-color: @border-col;
     background-color: @bg-col;
+    border-radius: 10px;
 }
 
 mainbox {
@@ -65,9 +65,10 @@ listview {
 }
 
 element {
-    padding: 5px;
+    padding: 7px;
     background-color: @bg-col;
     text-color: @fg-col;
+    border-radius: 7px;
 }
 
 element-icon {
