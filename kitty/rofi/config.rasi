@@ -1,9 +1,9 @@
 configuration{
-    kb-cancel: "Alt+w,Escape";
+    kb-cancel: "Alt+c,Escape";
     icon-theme: "Oranchelo";
     show-icons: true;
     terminal: "alacritty";
-    display-drun: "";
+    display-drun: "";
     hide-scrollbar: true;
     drun-display-format: "{icon} {name}";
     location: 0;
@@ -41,9 +41,8 @@ inputbar {
 }
 
 prompt {
-    font: "JetBrains Mono 15";
     background-color: @bg-col;
-    padding: 5px 6px 6px 6px;
+    padding: 6px;
     text-color: @fg-col;
     margin: 20px 0px 0px 20px;
 }

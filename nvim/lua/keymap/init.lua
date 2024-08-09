@@ -1,10 +1,12 @@
 local keymap = vim.keymap
 
 keymap.set("v", " ", "<C-C>")
-keymap.set('n', '<leader>b', ':Neotree filesystem reveal left <CR>')
+-- keymap.set('n', '<leader>b', ':Neotree filesystem reveal left <CR>')
+keymap.set('n', '<leader>b', ':NvimTreeToggle <CR>')
 
-keymap.set('n', '<C-p>', '"+p')
-keymap.set('n', '<C-y>', '"+y')
+keymap.set({'v', 'n'}, '<A-p>', '"+p')
+keymap.set({'v', 'n'}, '<A-y>', '"+y')
+keymap.set({'v', 'n'}, '<A-d>', 'd')
 
 keymap.set('n', '<CR>', '<nop>')
 
@@ -27,10 +29,9 @@ keymap.set({'v', 'n'}, '<leader>rr', ':LspRestart <CR>')
 keymap.set({'v', 'n'}, '<Tab>', ':bp <CR>')
 keymap.set({'v', 'n'}, '<C-Tab>', ':bn <CR>')
 
-keymap.set('n', '<M-Y>', '"+y')
-keymap.set('n', '<M-P>', '"+p')
-keymap.set('n', '<M-D>', 'd')
 
+keymap.set("n", "s-C-l", "<cmd>vertical resize +5<CR>")
+keymap.set("n", "s-C-l", "<cmd>vertical resize +5<CR>")
 keymap.set("n", "s-C-l", "<cmd>vertical resize +5<CR>")
 keymap.set("n", "s-C-h", ":vertical resize -5<CR>")
 keymap.set("n", "s-C-k", ":horizontal resize +2<CR>")

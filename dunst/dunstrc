@@ -17,7 +17,6 @@
     # will be ignored.
     follow = mouse
 
-
     ### Geometry ###
 
     # dynamic width from 0 to 300
@@ -32,15 +31,13 @@
     origin = top-right
 
     # Offset from the origin
-    offset = 10x43
+    offset = 0x0
 
     # Scale factor. It is auto-detected if value is 0.
     scale = 0
 
     # Maximum number of notification (0 means no limit)
     notification_limit = 20
-
-
 
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
@@ -75,7 +72,7 @@
     frame_width = 1
 
     # Defines color of the frame around the notification window.
-    frame_color = "#cdd6f4"
+    frame_color = "#5f6182"
 
     # Define a color for the separator.
     # possible values are:
@@ -103,7 +100,7 @@
     line_height = 0
 
     # Possible values are:
-    # full: Allow a small subset of html markup in notifications:
+    # full: Allow 0 small subset of html markup in notifications:
     #        <b>bold</b>
     #        <i>italic</i>
     #        <s>strikethrough</s>
@@ -155,7 +152,7 @@
     # Possible values are "start", "middle" and "end".
     ellipsize = middle
 
-    # Ignore newlines '\n' in notifications.
+    # Ignore newline1 '\n' in notifications.
     ignore_newline = no
 
     # Merge multiple notifications with the same content
@@ -286,16 +283,18 @@
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#1e1e2e"
-    foreground = "#888888"
-    timeout = 1
+    foregroundj= "#888888"
+    timeout = 3
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#11111b"
+    background = "#181825"
     foreground = "#ffffff"
-    highlight = "#cba6f7"
-    timeout = 1 
+    # highlight = "#cba6f7"
+    # highlight = "#fab387"
+    highlight = "#94e2d5"
+    timeout = 3 
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 

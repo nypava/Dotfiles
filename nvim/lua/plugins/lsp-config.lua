@@ -13,7 +13,7 @@ return {
     config = function()
       require("mason-lspconfig").setup(
         {
-          ensure_installed = {"lua_ls", "pyright", "biome", "rust_analyzer", "svelte", "tailwindcss"} }
+          ensure_installed = {"lua_ls", "pyright", "biome", "rust_analyzer", "svelte", "tailwindcss", "clangd", "html", "cssls",  "unocss", "tsserver"} }
       )
     end,
   },
@@ -27,6 +27,11 @@ return {
       lspconfig.svelte.setup({})
       lspconfig.rust_analyzer.setup({})
       lspconfig.tailwindcss.setup({})
+      lspconfig.clangd.setup({})
+      lspconfig.html.setup({})
+      lspconfig.cssls.setup({})
+      lspconfig.tsserver.setup({})
+      lspconfig.unocss.setup({})
 
       vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
         vim.lsp.diagnostic.on_publish_diagnostics, {

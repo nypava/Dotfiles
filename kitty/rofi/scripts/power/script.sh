@@ -1,10 +1,10 @@
 theme="~/.config/rofi/scripts/power/theme.rasi"
 
-shutdown="󰐥 Shutdown"
-reboot=" Restart"
-lock=" Lock"
-suspend="󰤄 Sleep"
-logout="󰍃 Logout"
+shutdown=" Shutdown"
+reboot=" Restart"
+lock=" Lock"
+suspend=" Sleep"
+logout=" Logout"
 yes="Yes"
 no="No"
 

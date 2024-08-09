@@ -1,5 +1,9 @@
 return {
   "nvim-treesitter/nvim-treesitter",
+  dependencies = {
+    "nvim-telescope/telescope-live-grep-args.nvim" ,
+    version = "^1.0.0"
+  },
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup({

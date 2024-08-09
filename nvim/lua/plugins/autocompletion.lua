@@ -8,6 +8,23 @@ return {
   'hrsh7th/vim-vsnip',
   {'hrsh7th/nvim-cmp',
     config = function()
+      local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+
+      capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+      require('lspconfig').html.setup {
+        capabilities = capabilities,
+      }
+
+      require('lspconfig').cssls.setup {
+        capabilities = capabilities,
+      }
+
+
+      require("cmp").setup.filetype("norg", {
+        enabled = false,
+      })
+
       local cmp = require'cmp'
       cmp.setup({
         snippet = {
@@ -25,13 +42,17 @@ return {
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
         }),
         sources = cmp.config.sources({
-          { name = 'nvim_lsp' },
+          {
+            name = "nvim_lsp",
+            entry_filter = function(entry, ctx)
+              return require("cmp").lsp.CompletionItemKind.Snippet ~= entry:get_kind()
+            end,
+          },
           { name = 'vsnip' },
         }, {
             { name = 'buffer' },
           })
       })
-
     end
   }
 }
