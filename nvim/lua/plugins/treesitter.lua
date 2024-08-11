@@ -7,7 +7,7 @@ return {
   build = ":TSUpdate",
   config = function()
     require("nvim-treesitter.configs").setup({
-      ensure_installed = {"lua", "javascript", "css", "python", "rust", "bash"},
+      ensure_installed = {"lua", "javascript", "css", "python", "rust", "bash", "svelte", "typescript"},
       highlight = { enable = true },
       indent = { enable = true},
       autotag= {

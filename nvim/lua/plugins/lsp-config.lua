@@ -1,8 +1,5 @@
 return {
   {
-    'leafOfTree/vim-svelte-plugin',
-  },
-  {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup()
@@ -24,13 +21,13 @@ return {
       lspconfig.lua_ls.setup({})
       lspconfig.pyright.setup({file_type={"python"}})
       lspconfig.biome.setup({})
-      lspconfig.svelte.setup({})
+      lspconfig.svelte.setup({file_type="svelte"})
       lspconfig.rust_analyzer.setup({})
-      lspconfig.tailwindcss.setup({})
+      lspconfig.tailwindcss.setup({file_type={"svelte"}})
       lspconfig.clangd.setup({})
-      lspconfig.html.setup({})
+      lspconfig.html.setup({file_type={"svelte", "html"}})
       lspconfig.cssls.setup({})
-      lspconfig.tsserver.setup({})
+      lspconfig.tsserver.setup({file_type={'svelte', 'ts'}})
       lspconfig.unocss.setup({})
 
       vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
