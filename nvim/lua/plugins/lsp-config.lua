@@ -25,9 +25,9 @@ return {
       lspconfig.rust_analyzer.setup({})
       lspconfig.tailwindcss.setup({file_type={"svelte"}})
       lspconfig.clangd.setup({})
-      lspconfig.html.setup({file_type={"svelte", "html"}})
+      lspconfig.html.setup({file_type={"html"}})
       lspconfig.cssls.setup({})
-      lspconfig.tsserver.setup({file_type={'svelte', 'ts'}})
+      lspconfig.tsserver.setup({file_type={'ts'}})
       lspconfig.unocss.setup({})
 
       vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(

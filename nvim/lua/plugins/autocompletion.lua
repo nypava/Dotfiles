@@ -6,7 +6,10 @@ return {
   'hrsh7th/cmp-cmdline',
   'hrsh7th/cmp-vsnip',
   'hrsh7th/vim-vsnip',
-  {'hrsh7th/nvim-cmp',
+  {
+    "hrsh7th/nvim-cmp",
+    commit = "b356f2c",
+    pin = true,
     config = function()
       local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 

@@ -17,7 +17,7 @@ return {
       )
       require("luasnip").filetype_extend("typescript", { "tsdoc" })
       require("luasnip").filetype_extend("javascript", { "jsdoc" })
-      require("luasnip").filetype_extend("svelte", { "svelte" })
+      require("luasnip").filetype_extend("svelte", { "sveltedoc" })
       require("luasnip").filetype_extend("lua", { "luadoc" })
       require("luasnip").filetype_extend("python", { "pydoc" })
       require("luasnip").filetype_extend("rust", { "rustdoc" })
@@ -29,6 +29,4 @@ return {
       require("luasnip").filetype_extend("sh", { "shelldoc" })
     end,
   },
-
 }
-
