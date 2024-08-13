@@ -5,6 +5,7 @@ vim.opt.scrolloff = 6
 vim.g.mapleader = ' '
 
 vim.cmd("set expandtab")
+vim.cmd("set backupcopy=yes")
 vim.cmd("set tabstop=2")
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
